@@ -28,11 +28,11 @@ namespace DevIO.App.ViewModels
         public string Descricao { get; set; }
 
         [DisplayName("Imagem do Produto")]
-       // public IFormFile ImagemUpload { get; set; }
+        public IFormFile ImagemUpload { get; set; }
 
         public string Imagem { get; set; }
 
-         public decimal Valor { get; set; }
+        public decimal Valor { get; set; }
 
         [ScaffoldColumn(false)]
         public DateTime DataCadastro { get; set; }
@@ -42,6 +42,6 @@ namespace DevIO.App.ViewModels
 
         public FornecedorViewModel Fornecedor { get; set; }
 
-       // public IEnumerable<FornecedorViewModel> Fornecedores { get; set; }
+        public IEnumerable<FornecedorViewModel> Fornecedores { get; set; }
     }
 }
