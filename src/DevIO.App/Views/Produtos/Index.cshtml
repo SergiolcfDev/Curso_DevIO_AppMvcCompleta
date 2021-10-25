@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<DevIO.App.ViewModels.ProdutoViewModel>
 
 @{
-    ViewData["Title"] = "Lista de Produtos";
+    ViewData["Title"] = "Novo Produto";
 }
 
 <h1>@ViewData["Title"]</h1>
@@ -37,6 +37,7 @@
         {
             <tr>
                 <td>
+                    <img src="~/Imagens/@item.Imagem" alt="@item.Imagem" style="width: 70px; height: 100px"/>
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Nome)
