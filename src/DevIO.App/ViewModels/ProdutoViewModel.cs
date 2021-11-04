@@ -32,6 +32,7 @@ namespace DevIO.App.ViewModels
 
         public string Imagem { get; set; }
 
+        [Required(ErrorMessage = "O campo {0} é Obrigatório")]
         public decimal Valor { get; set; }
 
         [ScaffoldColumn(false)]
