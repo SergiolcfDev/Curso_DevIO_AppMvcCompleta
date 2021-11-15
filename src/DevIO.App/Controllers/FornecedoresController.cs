@@ -2,10 +2,8 @@
 //using System.Collections.Generic;
 //using System.Threading.Tasks;
 //using AutoMapper;
-//using DevIO.App.Extensions;
 //using Microsoft.AspNetCore.Mvc;
 //using DevIO.App.ViewModels;
-//using DevIO.Business.Intefaces;
 //using DevIO.Business.Models;
 //using Microsoft.AspNetCore.Authorization;
 //using DevIO.Business.Interfaces;
