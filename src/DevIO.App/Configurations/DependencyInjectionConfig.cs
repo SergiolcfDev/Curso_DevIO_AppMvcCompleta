@@ -1,5 +1,4 @@
-﻿using DevIO.App.Extensions;
-using DevIO.Business.Intefaces;
+﻿using DevIO.Business.Intefaces;
 using DevIO.Business.Interfaces;
 using DevIO.Business.Notificacoes;
 using DevIO.Business.Services;

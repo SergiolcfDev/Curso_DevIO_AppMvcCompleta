@@ -1,4 +1,5 @@
-﻿using DevIO.Business.Models.Validations.Documentos;
+﻿using DevIO.Business.Models.Enums;
+using DevIO.Business.Models.Validations.Documentos;
 using FluentValidation;
 
 namespace DevIO.Business.Models.Validations
@@ -12,7 +13,7 @@ namespace DevIO.Business.Models.Validations
                 .Length(2, 100)
                 .WithMessage("O campo {PropertyName} precisa ter entre {MinLength} e {MaxLength} caracteres");
 
-            When(f => f.TipoFornecedor == TipoFornecedor.PessoaFisica, () =>
+            When(f => f._TipoFornecedor == TipoFornecedor.PessoaFisica, () =>
             {
                 RuleFor(f => f.Documento.Length).Equal(CpfValidacao.TamanhoCpf)
                     .WithMessage("O campo Documento precisa ter {ComparisonValue} caracteres e foi fornecido {PropertyValue}.");
@@ -20,7 +21,7 @@ namespace DevIO.Business.Models.Validations
                     .WithMessage("O documento fornecido é inválido.");
             });
 
-            When(f => f.TipoFornecedor == TipoFornecedor.PessoaJuridica, () =>
+            When(f => f._TipoFornecedor == TipoFornecedor.PessoaJuridica, () =>
             {
                 RuleFor(f => f.Documento.Length).Equal(CnpjValidacao.TamanhoCnpj)
                     .WithMessage("O campo Documento precisa ter {ComparisonValue} caracteres e foi fornecido {PropertyValue}.");
